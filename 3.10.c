@@ -4,6 +4,7 @@ struct Item{
     char name[50];
     float unitPrice;
     int quality;
+    float itemCost;
 };
 
 int main(){
@@ -19,24 +20,25 @@ int main(){
 
     struct Item items[N];
 
-    printf("--- RECEIPT --\n");
-
     for(i = 0; i < N; i++){
-        float itemCost;
-
+        
         if(scanf("%s %f %d", items[i].name, &items[i].unitPrice, &items[i].quality) !=3){
             return 1;
         }
 
-        itemCost = items[i].unitPrice * items[i].quality;
+        items[i].itemCost = items[i].unitPrice * items[i].quality;
         
-        printf("%s x %d = %.2f\n", items[i].name, items[i].quality, itemCost);
-        
-        subTotal += itemCost;
+        subTotal += items[i].itemCost;
     }
-
+    
     totalVAT = subTotal * VAT_RATE;
     grandTotal = subTotal + totalVAT;
+
+    printf("--- RECEIPT --\n");
+
+    for(i = 0; i < N; i++){
+        printf("%s x %d = %.2f\n", items[i].name, items[i].quality, items[i].itemCost);
+    }
 
     printf("-------------\n");
 
