@@ -29,8 +29,9 @@ int main(){
         }
 
         itemCost = items[i].unitPrice * items[i].quality;
-
+        
         printf("%s x %d = %.2f\n", items[i].name, items[i].quality, itemCost);
+        
         subTotal += itemCost;
     }
 
@@ -38,8 +39,11 @@ int main(){
     grandTotal = subTotal + totalVAT;
 
     printf("-------------\n");
+
     printf("Subtotal: %.2f\n", subTotal);
+
     printf("VAT (7%%): %.2f\n", totalVAT);
+
     printf("Grand Total: %.2f\n", grandTotal);
 
     return 0;
