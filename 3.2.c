@@ -27,7 +27,7 @@ int main(){
     }
 
     for(i = 0; i < N; i++){
-        printf("ID: %d, Name: %s, Score: %.2f\n", student[i].studentId, student[i].name, student[i].score);
+        printf("ID:%d, Name:%s, Score:%.2f\n",student[i].studentId,student[i].name,student[i].score);
     }
 
     return 0;
