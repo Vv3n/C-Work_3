@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.h>
 
 int main(){
     char text[101];
@@ -14,13 +13,13 @@ int main(){
     }
 
     for(i = 0; text[i] != '\0'; i++){
-        if(isupper(text[i])){
+        if(text[i] >= 'A' && text[i] <= 'Z'){
             countUpper++;
         }
-        else if(islower(text[i])){
+        else if(text[i] >= 'a' && text[i] <= 'z'){
             countLower++;
         }
-        else if(isdigit(text[i])){
+        else if(text[i] >= '0' && text[i] <= '9'){
             countDigit++;
         }
         else{
