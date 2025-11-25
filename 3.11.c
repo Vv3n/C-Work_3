@@ -16,7 +16,9 @@ int main(){
 
         printf("Select item (1-4): ");
         if(scanf("%d", &choice) != 1){
-            break;
+            printf("\nPlease Enter Only Number!!!(1-4)\n");
+            while(getchar() != '\n')
+            continue;
         }
         if(choice == 1){
             totalCost += 15.00;
@@ -26,6 +28,11 @@ int main(){
         }
         else if(choice == 3){
             totalCost += 25.00;
+        }
+        else if(choice > 4 || choice < 1){
+           printf("\nPlease Enter Only Number 1-4 !!!\n");
+           while(getchar() != '\n');
+           continue;
         }
     } while(choice != 4);
 
