@@ -34,19 +34,19 @@ int main(){
     totalVAT = subTotal * VAT_RATE;
     grandTotal = subTotal + totalVAT;
 
-    printf("--- RECEIPT --\n");
+    printf("\n--- RECEIPT ---\n");
 
     for(i = 0; i < N; i++){
-        printf("%s x %d = %.2f\n", items[i].name, items[i].quality, items[i].itemCost);
+        printf("\n%s x %d = %.2f\n", items[i].name, items[i].quality, items[i].itemCost);
     }
 
-    printf("-------------\n");
+    printf("\n-------------\n");
 
-    printf("Subtotal: %.2f\n", subTotal);
+    printf("\nSubtotal : %.2f\n", subTotal);
 
-    printf("VAT (7%%): %.2f\n", totalVAT);
+    printf("\nVAT (7%%) : %.2f\n", totalVAT);
 
-    printf("Grand Total: %.2f\n", grandTotal);
+    printf("\nGrand Total : %.2f\n", grandTotal);
 
     return 0;
 }
